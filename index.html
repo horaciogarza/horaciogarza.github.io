@@ -4,343 +4,208 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Boda de Alejandra & Horacio</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
-
-        /* Paleta de colores formal para la boda */
-        :root {
-            --color-primary: #2c3e50; /* Azul oscuro para texto y elementos */
-            --color-accent: #bdc3c7; /* Gris claro para acentos */
-            --color-gold: #d4af37; /* Oro suave para detalles */
-            --color-white: #ffffff; /* Blanco para el fondo y elementos */
-            --font-family-heading: 'Lora', serif;
-        }
-
         body {
-            font-family: var(--font-family-heading);
-            background-image: url('invitation-ba1ckground.jpg'); /* Fondo que parece una hoja de invitación de boda */
-            background-size: cover;
-            background-repeat: no-repeat;
-            color: var(--color-primary);
+            font-family: 'Roboto Slab', serif;
+            background-color: #f9f9f9;
+            color: #333;
             margin: 0;
             padding: 0;
-        }
-
-        .parallax {
-            background-image: url('IMG_3439.JPG'); /* Imagen de fondo */
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            height: 70vh; /* La mitad de la pantalla */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-white);
-            text-align: center;
-            position: relative;
-        }
-
-        .parallax h1 {
-            font-family: var(--font-family-heading);
-            font-size: 4rem;
-            font-weight: bold;
-            z-index: 2; /* Asegura que el texto esté sobre las partículas */
-        }
-
-        .parallax #date {
-            margin-top: 20px;
-            font-size: 1.5rem;
-            font-weight: bold;
-            z-index: 2;
-        }
-
-        #particles-js {
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .section-title {
-            color: var(--color-primary);
-            font-weight: bold;
-        }
-
-        .card {
-            background-color: var(--color-white);
-            border: 2px solid var(--color-accent);
-            color: var(--color-primary);
-        }
-
-        footer {
-            background-color: var(--color-primary);
-            color: var(--color-white);
-            padding: 20px 0;
-            text-align: center;
-        }
-
-        /* Color Palette Section */
-        .color-palette-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: var(--color-primary);
-            font-weight: bold;
-        }
-
-        .color-palette {
-            display: flex;
-            height: 300px;
-            text-align: center;
-            font-weight: bold;
-            color: var(--color-white);
-        }
-
-        .color-box {
-            flex: 1;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            font-size: 1.5rem;
-            padding: 10px;
+            min-height: 100vh;
         }
 
-        .color-box p {
-            margin: 0;
-        }
-
-        .color-1 { background-color: #f75004; }
-        .color-2 { background-color: #9B2C79; }
-        .color-3 { background-color: #fa8457; }
-        .color-4 { background-color: #fb7fa0; }
-        .color-5 { background-color: #f40e5e; }
-
-        /* Estilos para el contador */
-        #countdown {
-            font-size: 1.5rem;
-            font-weight: bold;
-            margin-top: 10px;
-            z-index: 2; /* Asegura que el texto esté sobre las partículas */
-        }
-
-        /* Parallax para el resto de la página */
-        .parallax-section {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            padding: 100px 0;
-        }
-
-        #nuestra-historia {
-            background-image: url('background2.webp'); /* Imagen de fondo para la sección Historia */
-        }
-
-        #evento {
-            background-image: url('background3.webp'); /* Imagen de fondo para la sección Evento */
-        }
-
-        #codigo-vestimenta {
-            background-image: url('background4.webp'); /* Imagen de fondo para/url la sección Código de Vestimenta */
-        }
-
-        #confirmacion {
-            background-image: url('background5.webp'); /* Imagen de fondo para la sección Confirmación */
-        }
-
-        /* Navbar personalizado */
-        .navbar-custom {
-            background-color: transparent;
-            padding: 10px 0;
-            font-family: var(--font-family-heading);
-            font-size: 1.2rem;
+        .container {
+            max-width: 800px;
             text-align: center;
+            padding: 20px;
         }
 
-        .navbar-custom a {
-            color: var(--color-primary);
-            padding: 0 20px;
-            text-decoration: none;
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            color: #9B2C79;
         }
 
-        .navbar-custom a:hover {
-            color: var(--color-gold);
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            color: #fa8457;
         }
 
-        .icono-evento {
+        .countdown {
             font-size: 2rem;
-            margin-bottom: 10px;
-            color: var(--color-primary);
+            margin: 30px 0;
+            color: #333;
         }
+
+        .details {
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            color: #555;
+        }
+
+        .details p {
+            margin: 0.5rem 0;
+        }
+
+        .divider {
+            width: 50px;
+            height: 3px;
+            background-color: #f40e5e;
+            margin: 2rem auto;
+        }
+
+        .section-divider {
+            width: 100%;
+            height: 2px;
+            background-color: #fa8457;
+            margin: 3rem 0;
+        }
+
+        .story, .colors {
+            margin-top: 3rem;
+        }
+
+        .story h3, .colors h3 {
+            font-size: 2rem;
+            color: #9B2C79;
+            margin-bottom: 1rem;
+        }
+
+        .story p {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        .story img {
+            width: 100%;
+            height: auto;
+            margin-top: 1rem;
+            border-radius: 8px;
+        }
+
+        .colors .color-box {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin-bottom: 1.5rem;
+        }
+
+        .colors .color-box div {
+            width: 50px;
+            height: 50px;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+
+        .colors p {
+            margin: 0;
+            font-size: 1.1rem;
+            text-align: left;
+            color: #333;
+        }
+
+        .colors-text {
+            font-size: 1.2rem;
+            color: #555;
+            margin-top: 2rem;
+        }
+
+        footer {
+            margin-top: 3rem;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 400px;
+            margin-top: 3rem;
+        }
+
     </style>
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
 
-    <!-- Sección Hero con efecto Parallax y partículas -->
-    <section class="parallax">
-        <div id="particles-js"></div> <!-- Contenedor de partículas -->
-        <div class="container">
-            <h1>Alejandra & Horacio</h1>
-            <p id="date">9 de Agosto, 2025</p>
-            <p id="countdown"></p> <!-- Contador -->
+    <div class="container">
+        <h1>Alejandra & Horacio</h2>
+        <h2>Nos casamos el 9 de Agosto, 2025</h2>
+        
+        <div class="countdown" id="countdown">
+            <!-- El contador se mostrará aquí -->
         </div>
-    </section>
 
-    <!-- Navbar personalizado -->
-    <nav class="navbar-custom">
-        <a href="#nuestra-historia">Nuestra Historia</a>
-        <a href="#evento">El Evento</a>
-        <a href="#codigo-vestimenta">Código de Vestimenta</a>
-        <a href="#confirmacion">Confirmación</a>
-        <a href="#paleta-de-colores">Paleta de Colores</a>
-    </nav>
+        <div class="divider"></div>
 
-    <!-- Nuestra Historia -->
-    <section id="nuestra-historia" class="parallax-section py-5">
-        <div class="container">
-            <h2 class="section-title text-center">Nuestra Historia</h2>
-            <p class="text-center mt-4">Desde el primer momento que nos conocimos, supimos que estábamos destinados a estar juntos. Esta es nuestra historia de amor...</p>
+        <div class="details">
+            <p><strong>Recepción:</strong> El Uro Eventos</p>
+            <p><strong>Ceremonia:</strong> Iglesia Corps Christi</p>
         </div>
-    </section>
 
-    <!-- El Evento -->
-    <section id="evento" class="parallax-section py-5">
-        <div class="container">
-            <h2 class="section-title text-center">El Evento</h2>
-            <div class="row mt-4">
-                <div class="col-md-6 text-center">
-                    <i class="bi bi-building icono-evento"></i>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Ceremonia</h5>
-                            <p class="card-text">Lugar: Iglesia Corpus Christi</p>
-                            <p class="card-text">Hora: 4:00 PM</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 text-center">
-                    <i class="bi bi-geo-alt icono-evento"></i>
-                    <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Recepción</h5>
-                            <p class="card-text">Lugar: El Uro Eventos</p>
-                            <p class="card-text">Hora: 6:00 PM</p>
-                        </div>
-                    </div>
-                </div>
+        <div class="section-divider"></div>
+
+        <div class="story">
+            <h3>Nuestra Historia...</h3>
+            <p>Una historia de amor que comenzó con una mirada, creciendo día a día con alegría y complicidad.</p>
+            <img src="https://github.com/horaciogarza/horaciogarza.github.io/blob/master/IMG_3439.JPG?raw=true" alt="Nuestra Historia">
+        </div>
+
+        <div class="chart-container">
+            <canvas id="myChart"></canvas>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="colors">
+            <h3>Paleta de Colores</h3>
+            <div class="color-box">
+                <div style="background-color: #f75004;"></div>
+                <p><strong>Tangelo</strong> - Pasión vibrante y energía que ilumina nuestro amor.</p>
+            </div>
+            <div class="color-box">
+                <div style="background-color: #9B2C79;"></div>
+                <p><strong>Plum</strong> - Profundidad y elegancia, reflejo de nuestra unión.</p>
+            </div>
+            <div class="color-box">
+                <div style="background-color: #fa8457;"></div>
+                <p><strong>Coral</strong> - Ternura y calidez que envuelve nuestros corazones.</p>
+            </div>
+            <div class="color-box">
+                <div style="background-color: #fb7fa0;"></div>
+                <p><strong>Tickle me Pink</strong> - Alegría y diversión, esencia de nuestra relación.</p>
+            </div>
+            <div class="color-box">
+                <div style="background-color: #f40e5e;"></div>
+                <p><strong>Cerise</strong> - Amor ardiente, vivo y lleno de vida.</p>
+            </div>
+            <div class="color-box">
+                <div style="background-color: #f9bb50;"></div>
+                <p><strong>Xanthous</strong> - Felicidad y luz que nos guían en nuestro camino.</p>
+            </div>
+            <div class="colors-text">
+                <p>Elegimos estos colores para nuestra boda porque representan la pasión, alegría y amor que compartimos.</p>
             </div>
         </div>
-    </section>
 
-    <!-- Código de Vestimenta -->
-    <section id="codigo-vestimenta" class="parallax-section py-5">
-        <div class="container">
-            <h2 class="section-title text-center">Código de Vestimenta</h2>
-            <p class="text-center mt-4">La boda tendrá un código de vestimenta formal. Por favor, vístete con elegancia para celebrar este día especial con nosotros.</p>
-        </div>
-    </section>
-
-    <!-- Confirmación -->
-    <section id="confirmacion" class="parallax-section py-5">
-        <div class="container">
-            <h2 class="section-title text-center">Confirmación</h2>
-            <p class="text-center mt-4">Por favor confirma tu asistencia antes del 15 de Julio.</p>
-            <div class="text-center">
-                <a href="#" class="btn btn-lg" style="background-color: var(--color-primary); color: var(--color-white);">Confirmar Asistencia</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Paleta de Colores -->
-    <section id="paleta-de-colores" class="py-5">
-        <h2 class="color-palette-title">Paleta de Colores</h2> <!-- Título de la sección -->
-        <div class="container-fluid color-palette">
-            <div class="color-box color-1">
-                <p>Tangelo</p>
-            </div>
-            <div class="color-box color-2">
-                <p>Plum</p>
-            </div>
-            <div class="color-box color-3">
-                <p>Coral</p>
-            </div>
-            <div class="color-box color-4">
-                <p>Tickle me pink</p>
-            </div>
-            <div class="color-box color-5">
-                <p>Cerise</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pie de página -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Alejandra & Horacio. Todos los derechos reservados.</p>
-        </div>
-    </footer>
+        <footer>
+            <p>Con mucho amor, Alejandra & Horacio</p>
+        </footer>
+    </div>
 
     <script>
-        // Configuración de partículas
-        particlesJS("particles-js", {
-            "particles": {
-                "number": {
-                    "value": 50,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "shape": {
-                    "type": "circle"
-                },
-                "opacity": {
-                    "value": 0.7,
-                    "random": true
-                },
-                "size": {
-                    "value": 10,
-                    "random": true
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2,
-                    "direction": "none",
-                    "random": true,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false
-                }
-            },
-            "interactivity": {
-                "events": {
-                    "onhover": {
-                        "enable": true,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    },
-                    "resize": true
-                }
-            },
-            "retina_detect": true
-        });
-
-        // Configuración del contador
+        // Contador regresivo
         var countDownDate = new Date("Aug 9, 2025 00:00:00").getTime();
 
         var countdownfunction = setInterval(function() {
-
             var now = new Date().getTime();
             var distance = countDownDate - now;
 
@@ -349,15 +214,99 @@
             var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-            + minutes + "m " + seconds + "s ";
+            document.getElementById("countdown").innerHTML = days + " días " + hours + " horas "
+            + minutes + " minutos " + seconds + " segundos ";
 
             if (distance < 0) {
                 clearInterval(countdownfunction);
-                document.getElementById("countdown").innerHTML = "¡Es hoy!";
+                document.getElementById("countdown").innerHTML = "¡Ya es el gran día!";
             }
         }, 1000);
+
+        // Chart.js
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025,2026,2027,2028,2029],
+                datasets: [{
+                    label: 'Horacio',
+                    data: [75,75,75,75,75,75,75,75,75,75,71,71,71,75,75,75,75,75,75,75,75,75,75,75,75,75  ,70,69,71,71,70],
+                    borderColor: '#f75004',
+                    fill: false,
+                    tension: 0.1
+                },
+                {
+                    label: 'Alejandra',
+                    data: [65,65,65,65,65,65,65,65,65,65,69,69,69,65,65,65,65,65,65,65,65,65,65,65,65,65,70,71,69,71,70],
+                    borderColor: '#9B2C79',
+                    fill: false,
+                    tension: 0.1
+                },
+                {
+                    label: 'Alejandra & Horacio',
+                    data: [,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,70,70,70,70,70],
+                    borderColor: '#f40e5e',
+                    fill: false,
+                    tension: 0.9
+                }]
+            },
+            options: {
+                scales: {
+                    x: {
+                        title: {
+                            display: false,
+                            text: 'Año'
+                        }
+                    },
+                    y: {
+                        title: {
+                            display: false,
+                            text: 'Valor Y'
+                        },
+                        min: 40,
+                        display: false,
+                        max: 100
+                    }
+                },
+                interaction: {
+                    intersect: false,
+                    mode: 'nearest',
+                    includeInvisible: true
+                },
+                plugins: {
+    annotation: {
+        annotations: [
+            {
+                type: 'label',
+                xValue: 2021,
+                yValue: 50,
+                backgroundColor: '#9B2C79', // Color de fondo de la etiqueta
+                content: ['Aquí nos hicimos novios'],
+                position: 'center',
+                yAdjust: -10, // Ajuste vertical de la etiqueta
+                xAdjust: -10, // Ajuste horizontal de la etiqueta
+                font: {
+                    size: 12,
+                    weight: 'bold',
+                    family: 'Roboto Slab'
+                },
+                color: 'white' // Color del texto
+            }
+        ]
+    }
+}
+
+            }
+        });
+
+        // Include the annotation plugin
+        Chart.register(Chart.Annotation);
+
     </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
