@@ -1,279 +1,179 @@
 <!DOCTYPE html>
-<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
-<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<html lang="es">
 <head>
-    <title>Horacio Garza's Resume</title>
-    <!-- Meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Responsive HTML5 Resume/CV Template for Developers">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon.ico">  
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,500,400italic,300italic,300,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-    <!-- Global CSS -->
-    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
-    <!-- Plugins CSS -->
-    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
-    
-    <!-- Theme CSS -->  
-    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-</head> 
+    <title>Boda de Horacio y Alejandra</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Paleta de colores personalizada */
+        :root {
+            --color-1: #f75004;
+            --color-2: #9B2C79;
+            --color-3: #fa8457;
+            --color-4: #fb7fa0;
+            --color-5: #f40e5e;
+            --color-6: #f9bb50;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--color-6);
+            color: #fff;
+        }
+
+        .navbar {
+            background-color: var(--color-2);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--color-1), var(--color-3));
+            color: #fff;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: bold;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+        }
+
+        .section-title {
+            color: var(--color-2);
+            font-weight: bold;
+        }
+
+        .card {
+            background-color: var(--color-4);
+            border: none;
+            color: #fff;
+        }
+
+        .card-body {
+            background-color: var(--color-2);
+        }
+
+        footer {
+            background-color: var(--color-5);
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+    </style>
+</head>
 <body>
-    <div class="wrapper">
-        <div class="sidebar-wrapper">
-            <div class="profile-container">
-                <img class="profile" src="https://scontent-dft4-1.xx.fbcdn.net/v/t1.0-9/13532812_10208796762650732_5682746292992036288_n.jpg?oh=80dd8438c8ebb1588a446c4955ee21c9&oe=58D30F6B" alt="" width="30%"/>
-                <h1 class="name">Horacio Garza</h1>
-                <h3 class="tagline">Jr. 
-                    Developer</h3>
-            </div><!--//profile-container-->
-            
-            <div class="contact-container container-block">
-                <ul class="list-unstyled contact-list">
-                    <li class="email"><i class="fa fa-envelope"></i><a href="mailto: hhgarza95@gmail.com">hhgarza95@gmail.com</a></li>
-                    <li class="phone"><i class="fa fa-phone"></i><a href="tel: +5218184609669">+52 1 8184 609 669</a></li>
-                    <li class="linkedin"><i class="fa fa-linkedin"></i><a href="https://mx.linkedin.com/in/horaciogza" target="_blank">linkedin.com/in/horaciogza</a></li>
-                    <li class="github"><i class="fa fa-github"></i><a href="http://github.com/horaciogarza" target="_blank">github.com/horaciogarza</a></li>
-                    <li class="twitter"><i class="fa fa-twitter"></i><a href="https://twitter.com/horaciogza" target="_blank">@horaciogza</a></li>
-                </ul>
-            </div><!--//contact-container-->
-            <div class="education-container container-block">
-                <h2 class="container-block-title">Education</h2>
-                <div class="item">
-                    <h4 class="degree">Bachelor of Software Engineering</h4>
-                    <h5 class="meta"><i>Universidad Autónoma de Nuevo León</i></h5>
-                    <div class="time">2013 - </div>
-                </div><!--//item-->
-                <div class="item">
-                    <h4 class="degree">Associate in Applied Tech</h4>
-                    <h5 class="meta"><i>Universidad Autónoma de Nuevo León</i></h5>
-                    <div class="time">2013 - 2015</div>
-                </div><!--//item-->
-            </div><!--//education-container-->
-            
-            <div class="languages-container container-block">
-                <h2 class="container-block-title">Languages</h2>
-                <ul class="list-unstyled interests-list">
-                    <li>Spanish <span class="lang-desc">(Native)</span></li>
-                    <li>English <span class="lang-desc">(Professional)</span></li>
-                    <li>German <span class="lang-desc">(Basic)</span></li>
-                </ul>
-            </div><!--//interests-->
-            
-            <div class="interests-container container-block">
-                <h2 class="container-block-title">Interests</h2>
-                <ul class="list-unstyled interests-list">
-                    <li>Programming</li>
-                    <li>Blog-reading</li>
-                    <li>Bodybuilding</li>
-                </ul>
-            </div><!--//interests-->
-            
-        </div><!--//sidebar-wrapper-->
-        
-        <div class="main-wrapper">
-            
-            <section class="section summary-section">
-                <h2 class="section-title"><i class="fa fa-user"></i>Career Profile</h2>
-                <div class="summary">
-                    <p>Experience in iOS Development with 2 years of experience and using the new technologies that trends. Swift experience since WWDC 2014
-                    <br>
-                    I've Participated:
-                    <ul>
-                    <li>Digital Ocean's #Hacktoberfest </li>
-                    <li>TecmiHacks #Hackathon (2nd Place)</li>
-                        </ul>
 
-                    Member of:
-                        <ul>
-                            <li>Apple Developer Program</li>
-                        <li>Google Play Developers</li>
-                        <li>Microsoft Windows Insider Program</li>
-                    </ul>
-                        </p>
-                </div><!--//summary-->
-            </section><!--//section-->
-            
-            <section class="section experiences-section">
-                <h2 class="section-title"><i class="fa fa-briefcase"></i>Experiences</h2>
-                
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title">Campus Ambassador</h3>
-                            <div class="time">2016 - Present</div>
-                        </div><!--//upper-row-->
-                        <div class="company"><a target="_blank" href="https://www.hackerearth.com/">HackerEarth Inc.</a></div>
-                    </div><!--//meta-->
-                    <div class="details">
-                        
-                        <p>Main tasks:<br>
-                        <ul>
-                            <li>Introduce new and experienced programmers to HackerEarth Platform.</li>
-                            <li>Connect us to the programming club and placement cells of your college.</li>
-                            <li>Conducting Hackathons on HackerEarth.</li>
-                            <li>Come up with innovative ideas on how HackerEarth can associate with your college.</li>
-                            <li>Plug in HackerEarth as an associate in any technical fest that your college conducts.</li>
-                        </ul>
-                                
-   </p>
-                    </div><!--//details-->
-                </div><!--//item-->
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title">IT Trainee</h3>
-                            <div class="time">2015 - Present</div>
-                        </div><!--//upper-row-->
-                        <div class="company"><a target="_blank" href="http://www.johnsoncontrols.com/">Johnson Controls Inc.</a></div>
-                    </div><!--//meta-->
-                    <div class="details">
-                        <p>I worked as an IT Intern, my work was centered in giving support and the creation of new applications for enterprise, some of the technologies that I used were MS SQL Server, C# and VB .NET, and Visual Studio 2015 as my main IDE.</p>  
-                        <p>Main tasks:<br>
-                        <ul>
-                            <li>Software development with C# and VB .NET</li>
-                            <li>Development using Telerik framework for ASP.NET Controls (Full Dev Craft)</li>
-                            <li>SQL Server Administration and connections to applications</li>
-                            <li>Application Support</li>
-                            <li>Power BI  for automation reports</li>
-                        </ul>
-                                
-   </p>
-                    </div><!--//details-->
-                </div><!--//item-->
-                <div class="item">
-                    <div class="meta">
-                        <div class="upper-row">
-                            <h3 class="job-title">Independent Mobile-Application Developer</h3>
-                            <div class="time">2015 - Present</div>
-                        </div><!--//upper-row-->
-                        
-                    </div><!--//meta-->
-                    <div class="details">
-                        <p>I've Developed apps for education purposes for Android and iOS</p>  
-                        <p>Main Projects:<br>
-                        <ul>
-                            <li>Android: <a target="_blank" href="https://play.google.com/store/apps/details?id=com.hgarzstudio.colormindblown"></a>Strooper</li>
-                        </ul>
-   </p>
-                    </div><!--//details-->
-                </div><!--//item-->
-                
-                
-                
-            </section><!--//section-->
-            
-            <section class="section projects-section">
-                <h2 class="section-title"><i class="fa fa-archive"></i>Projects</h2>
-                <div class="intro">
-                    <p>Projects:</p>
-                </div><!--//intro-->
-                <div class="item">
-                    <span class="project-title"><a href="#hook">Strooper</a></span> - <span class="project-tagline">An Android game based in the Stroop effect.</span>
-                    
-                </div><!--//item-->
-                <div class="item">
-                    <span class="project-title"><a href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-web-development-agencies-devstudio/" target="_blank">DevStudio</a></span> - 
-                    <span class="project-tagline">A responsive website template designed to help web developers/designers market their services. </span>
-                </div><!--//item-->
-                
-            </section><!--//section-->
-            
-            <section class="skills-section section">
-                <h2 class="section-title"><i class="fa fa-rocket"></i>Skills &amp; Proficiency</h2>
-                <div class="skillset">        
-                    <div class="item">
-                        <h3 class="level-title">iOS</h3>
-                        <div class="level-bar">
-                            <div class="level-bar-inner" data-level="98%">
-                            </div>                                      
-                        </div><!--//level-bar-->                                 
-                    </div><!--//item-->
-                    
-                    <div class="item">
-                        <h3 class="level-title">Swift</h3>
-                        <div class="level-bar">
-                            <div class="level-bar-inner" data-level="98%">
-                            </div>                                      
-                        </div><!--//level-bar-->                                 
-                    </div><!--//item-->
-                    
-                    <div class="item">
-                        <h3 class="level-title">C# &amp; .NET</h3>
-                        <div class="level-bar">
-                            <div class="level-bar-inner" data-level="85%">
-                            </div>                                      
-                        </div><!--//level-bar-->                                 
-                    </div><!--//item-->
-                    
-                    <div class="item">
-                        <h3 class="level-title">Java</h3>
-                        <div class="level-bar">
-                            <div class="level-bar-inner" data-level="85%">
-                            </div>                                      
-                        </div><!--//level-bar-->                                 
-                    </div><!--//item-->
-                    
-                    <div class="item">
-                        <h3 class="level-title">SQL</h3>
-                        <div class="level-bar">
-                            <div class="level-bar-inner" data-level="85%">
-                            </div>                                      
-                        </div><!--//level-bar-->                                 
-                    </div><!--//item-->
-                    
-                    <div class="item">
-                        <h3 class="level-title">HTML5 &amp; CSS</h3>
-                        <div class="level-bar">
-                            <div class="level-bar-inner" data-level="80%">
-                            </div>                                      
-                        </div><!--//level-bar-->                                 
-                    </div><!--//item-->
-                    
-                    
-                    
-                    <div class="item">
-                        <h3 class="level-title">Sketch &amp; Photoshop</h3>
-                        <div class="level-bar">
-                            <div class="level-bar-inner" data-level="60%">
-                            </div>                                      
-                        </div><!--//level-bar-->                                 
-                    </div><!--//item-->
-                    
-                    <div class="item">
-                        <h3 class="level-title">Javascript &amp; jQuery</h3>
-                        <div class="level-bar">
-                            <div class="level-bar-inner" data-level="58%">
-                            </div>                                      
-                        </div><!--//level-bar-->                                 
-                    </div><!--//item-->
-                    
-                </div>  
-            </section><!--//skills-section-->
-            
-        </div><!--//main-body-->
-    </div>
- 
-    <footer class="footer">
-        <div class="text-center">
-                <!--/* This template is released under the Creative Commons Attribution 3.0 License. Please keep the attribution link below when using for your own project. Thank you for your support. :) If you'd like to use the template without the attribution, you can check out other license options via our website: themes.3rdwavemedia.com */-->
-                <small class="copyright">Designed with <i class="fa fa-heart"></i> by <a href="http://themes.3rdwavemedia.com" target="_blank">Xiaoying Riley</a> for developers</small>
-        </div><!--//container-->
-    </footer><!--//footer-->
- 
-    <!-- Javascript -->          
-    <script type="text/javascript" src="assets/plugins/jquery-1.11.3.min.js"></script>
-    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>    
-    <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>            
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Horacio y Alejandra</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#nuestra-historia">Nuestra Historia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#evento">El Evento</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#ubicacion">Ubicación</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#confirmacion">Confirmación</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Sección Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>¡Nos Casamos!</h1>
+            <p>Horacio y Alejandra</p>
+            <p>28 de Septiembre, 2024</p>
+        </div>
+    </section>
+
+    <!-- Nuestra Historia -->
+    <section id="nuestra-historia" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Nuestra Historia</h2>
+            <p class="text-center mt-4">Desde el primer momento que nos conocimos, supimos que estábamos destinados a estar juntos. Esta es nuestra historia de amor...</p>
+        </div>
+    </section>
+
+    <!-- El Evento -->
+    <section id="evento" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">El Evento</h2>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Ceremonia</h5>
+                            <p class="card-text">Lugar: Iglesia de San Pedro</p>
+                            <p class="card-text">Hora: 4:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Recepción</h5>
+                            <p class="card-text">Lugar: Salón La Estancia</p>
+                            <p class="card-text">Hora: 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-center">
+                        <div class="card-body">
+                            <h5 class="card-title">Cena</h5>
+                            <p class="card-text">Menú especial y muchas sorpresas</p>
+                            <p class="card-text">Hora: 8:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section id="ubicacion" class="py-5">
+        <div class="container">
+            <h2 class="section-title text-center">Ubicación</h2>
+            <p class="text-center mt-4">Iglesia de San Pedro, Av. de la Marina 1234, Ciudad de México, México</p>
+            <p class="text-center mt-2">Salón La Estancia, Calle Principal 5678, Ciudad de México, México</p>
+        </div>
+    </section>
+
+    <!-- Confirmación -->
+    <section id="confirmacion" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title text-center">Confirmación</h2>
+            <p class="text-center mt-4">Por favor confirma tu asistencia antes del 15 de Septiembre.</p>
+            <div class="text-center">
+                <a href="#" class="btn btn-lg" style="background-color: var(--color-1); color: #fff;">Confirmar Asistencia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pie de página -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Horacio y Alejandra. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> 
-
+</html>
