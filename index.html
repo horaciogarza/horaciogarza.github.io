@@ -7,8 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    
     <style>
         body {
             font-family: 'Roboto Slab', serif;
@@ -41,6 +39,18 @@
             color: #fa8457;
         }
 
+        h3 {
+            font-size: 1.5rem; /* Tamaño más pequeño que "Nuestra Historia" */
+            color: #9B2C79;
+            margin-top: 2rem;
+        }
+
+        .timeline-text {
+            font-size: 1.2rem;
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
         .countdown {
             font-size: 2rem;
             margin: 30px 0;
@@ -71,17 +81,17 @@
             margin: 3rem 0;
         }
 
-        .story, .colors {
+        .story, .colors, .tips {
             margin-top: 3rem;
         }
 
-        .story h3, .colors h3 {
+        .story h3, .colors h3, .tips h3 {
             font-size: 2rem;
             color: #9B2C79;
             margin-bottom: 1rem;
         }
 
-        .story p {
+        .story p, .tips p {
             font-size: 1.2rem;
             color: #555;
         }
@@ -128,7 +138,7 @@
 
         .chart-container {
             position: relative;
-            height: 400px;
+            height: 600px; /* Aumenta la altura vertical del gráfico */
             margin-top: 3rem;
         }
 
@@ -137,7 +147,7 @@
 <body>
 
     <div class="container">
-        <h1>Alejandra & Horacio</h2>
+        <h1>Alejandra & Horacio</h1>
         <h2>Nos casamos el 9 de Agosto, 2025</h2>
         
         <div class="countdown" id="countdown">
@@ -148,7 +158,7 @@
 
         <div class="details">
             <p><strong>Recepción:</strong> El Uro Eventos</p>
-            <p><strong>Ceremonia:</strong> Iglesia Corps Christi</p>
+            <p><strong>Ceremonia:</strong> Iglesia Corpus Christi</p>
         </div>
 
         <div class="section-divider"></div>
@@ -158,6 +168,9 @@
             <p>Una historia de amor que comenzó con una mirada, creciendo día a día con alegría y complicidad.</p>
             <img src="https://github.com/horaciogarza/horaciogarza.github.io/blob/master/IMG_3439.JPG?raw=true" alt="Nuestra Historia">
         </div>
+
+        <h3>Nuestra Línea del Tiempo</h3>
+        <p class="timeline-text">En 2006, nuestros corazones se cruzaron en la escuela, y en 2021, el destino nos unió nuevamente.</p>
 
         <div class="chart-container">
             <canvas id="myChart"></canvas>
@@ -196,6 +209,17 @@
             </div>
         </div>
 
+        <div class="section-divider"></div>
+
+        <div class="tips">
+            <h3>Consejos para los Invitados</h3>
+            <p>Queridos invitados, queremos que disfruten al máximo de nuestro día especial, por eso les compartimos algunos consejos:</p>
+            <p>- La paleta de colores de nuestra boda no es obligatoria para su vestimenta, pero si desean añadir un toque de color en sus accesorios, ¡se verá genial con nuestra temática!</p>
+            <p>- El código de vestimenta es formal, así que por favor vengan con sus mejores atuendos para celebrar con nosotros.</p>
+            <p>- Al llegar al lugar de la recepción, una persona amable les estará esperando en la entrada para indicarles en qué mesa estarán sentados.</p>
+            <p>¡Estamos deseando celebrar este día tan especial con todos ustedes!</p>
+        </div>
+
         <footer>
             <p>Con mucho amor, Alejandra & Horacio</p>
         </footer>
@@ -231,24 +255,30 @@
                 labels: [1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025,2026,2027,2028,2029],
                 datasets: [{
                     label: 'Horacio',
-                    data: [75,75,75,75,75,75,75,75,75,75,71,71,71,75,75,75,75,75,75,75,75,75,75,75,75,75  ,70,69,71,71,70],
+                    data: [75,75,75,75,75,75,75,75,75,75,71,71,71,75,75,75,75,75,75,75,75,75,75,75,75,75,70,69,71,71,70],
                     borderColor: '#f75004',
                     fill: false,
-                    tension: 0.1
+                    tension: 0.1,
+                    borderWidth: 4, // Doblar grosor de la línea
+                    pointRadius: 0 // Eliminar puntos
                 },
                 {
                     label: 'Alejandra',
                     data: [65,65,65,65,65,65,65,65,65,65,69,69,69,65,65,65,65,65,65,65,65,65,65,65,65,65,70,71,69,71,70],
                     borderColor: '#9B2C79',
                     fill: false,
-                    tension: 0.1
+                    tension: 0.1,
+                    borderWidth: 4, // Doblar grosor de la línea
+                    pointRadius: 0 // Eliminar puntos
                 },
                 {
-                    label: 'Alejandra & Horacio',
+                    label: 'Nuestra Unión',
                     data: [,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,70,70,70,70,70],
                     borderColor: '#f40e5e',
                     fill: false,
-                    tension: 0.9
+                    tension: 0.9,
+                    borderWidth: 4, // Doblar grosor de la línea
+                    pointRadius: 0 // Eliminar puntos
                 }]
             },
             options: {
@@ -275,33 +305,29 @@
                     includeInvisible: true
                 },
                 plugins: {
-    annotation: {
-        annotations: [
-            {
-                type: 'label',
-                xValue: 2021,
-                yValue: 50,
-                backgroundColor: '#9B2C79', // Color de fondo de la etiqueta
-                content: ['Aquí nos hicimos novios'],
-                position: 'center',
-                yAdjust: -10, // Ajuste vertical de la etiqueta
-                xAdjust: -10, // Ajuste horizontal de la etiqueta
-                font: {
-                    size: 12,
-                    weight: 'bold',
-                    family: 'Roboto Slab'
-                },
-                color: 'white' // Color del texto
-            }
-        ]
-    }
-}
-
+                    annotation: {
+                        annotations: [
+                            {
+                                type: 'label',
+                                xValue: 2021,
+                                yValue: 50,
+                                backgroundColor: '#9B2C79', // Color de fondo de la etiqueta
+                                content: ['Aquí nos hicimos novios'],
+                                position: 'center',
+                                yAdjust: -10, // Ajuste vertical de la etiqueta
+                                xAdjust: -10, // Ajuste horizontal de la etiqueta
+                                font: {
+                                    size: 12,
+                                    weight: 'bold',
+                                    family: 'Roboto Slab'
+                                },
+                                color: 'white' // Color del texto
+                            }
+                        ]
+                    }
+                }
             }
         });
-
-        // Include the annotation plugin
-        Chart.register(Chart.Annotation);
 
     </script>
 
