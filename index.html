@@ -3,108 +3,208 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Boda de Horacio y Alejandra</title>
+    <title>Boda de Alejandra & Horacio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <style>
-        /* Paleta de colores personalizada */
+        @import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&display=swap');
+
+        /* Paleta de colores formal para la boda */
         :root {
-            --color-1: #f75004;
-            --color-2: #9B2C79;
-            --color-3: #fa8457;
-            --color-4: #fb7fa0;
-            --color-5: #f40e5e;
-            --color-6: #f9bb50;
+            --color-primary: #2c3e50; /* Azul oscuro para texto y elementos */
+            --color-accent: #bdc3c7; /* Gris claro para acentos */
+            --color-gold: #d4af37; /* Oro suave para detalles */
+            --color-white: #ffffff; /* Blanco para el fondo y elementos */
+            --font-family-heading: 'Lora', serif;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: var(--color-6);
-            color: #fff;
+            font-family: var(--font-family-heading);
+            background-image: url('invitation-ba1ckground.jpg'); /* Fondo que parece una hoja de invitación de boda */
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: var(--color-primary);
+            margin: 0;
+            padding: 0;
         }
 
-        .navbar {
-            background-color: var(--color-2);
-        }
-
-        .hero {
-            background: linear-gradient(135deg, var(--color-1), var(--color-3));
-            color: #fff;
-            padding: 100px 0;
+        .parallax {
+            background-image: url('IMG_3439.JPG'); /* Imagen de fondo */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 70vh; /* La mitad de la pantalla */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-white);
             text-align: center;
+            position: relative;
         }
 
-        .hero h1 {
-            font-size: 3rem;
+        .parallax h1 {
+            font-family: var(--font-family-heading);
+            font-size: 4rem;
             font-weight: bold;
+            z-index: 2; /* Asegura que el texto esté sobre las partículas */
         }
 
-        .hero p {
+        .parallax #date {
+            margin-top: 20px;
             font-size: 1.5rem;
+            font-weight: bold;
+            z-index: 2;
+        }
+
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
         }
 
         .section-title {
-            color: var(--color-2);
+            color: var(--color-primary);
             font-weight: bold;
         }
 
         .card {
-            background-color: var(--color-4);
-            border: none;
-            color: #fff;
-        }
-
-        .card-body {
-            background-color: var(--color-2);
+            background-color: var(--color-white);
+            border: 2px solid var(--color-accent);
+            color: var(--color-primary);
         }
 
         footer {
-            background-color: var(--color-5);
-            color: #fff;
+            background-color: var(--color-primary);
+            color: var(--color-white);
             padding: 20px 0;
             text-align: center;
         }
 
+        /* Color Palette Section */
+        .color-palette-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--color-primary);
+            font-weight: bold;
+        }
+
+        .color-palette {
+            display: flex;
+            height: 300px;
+            text-align: center;
+            font-weight: bold;
+            color: var(--color-white);
+        }
+
+        .color-box {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            padding: 10px;
+        }
+
+        .color-box p {
+            margin: 0;
+        }
+
+        .color-1 { background-color: #f75004; }
+        .color-2 { background-color: #9B2C79; }
+        .color-3 { background-color: #fa8457; }
+        .color-4 { background-color: #fb7fa0; }
+        .color-5 { background-color: #f40e5e; }
+
+        /* Estilos para el contador */
+        #countdown {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 10px;
+            z-index: 2; /* Asegura que el texto esté sobre las partículas */
+        }
+
+        /* Parallax para el resto de la página */
+        .parallax-section {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 100px 0;
+        }
+
+        #nuestra-historia {
+            background-image: url('background2.webp'); /* Imagen de fondo para la sección Historia */
+        }
+
+        #evento {
+            background-image: url('background3.webp'); /* Imagen de fondo para la sección Evento */
+        }
+
+        #codigo-vestimenta {
+            background-image: url('background4.webp'); /* Imagen de fondo para/url la sección Código de Vestimenta */
+        }
+
+        #confirmacion {
+            background-image: url('background5.webp'); /* Imagen de fondo para la sección Confirmación */
+        }
+
+        /* Navbar personalizado */
+        .navbar-custom {
+            background-color: transparent;
+            padding: 10px 0;
+            font-family: var(--font-family-heading);
+            font-size: 1.2rem;
+            text-align: center;
+        }
+
+        .navbar-custom a {
+            color: var(--color-primary);
+            padding: 0 20px;
+            text-decoration: none;
+        }
+
+        .navbar-custom a:hover {
+            color: var(--color-gold);
+        }
+
+        .icono-evento {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: var(--color-primary);
+        }
     </style>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 </head>
 <body>
 
-    <!-- Barra de navegación -->
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <!-- Sección Hero con efecto Parallax y partículas -->
+    <section class="parallax">
+        <div id="particles-js"></div> <!-- Contenedor de partículas -->
         <div class="container">
-            <a class="navbar-brand" href="#">Horacio y Alejandra</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#nuestra-historia">Nuestra Historia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#evento">El Evento</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#ubicacion">Ubicación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#confirmacion">Confirmación</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Sección Hero -->
-    <section class="hero">
-        <div class="container">
-            <h1>¡Nos Casamos!</h1>
-            <p>Horacio y Alejandra</p>
-            <p>28 de Septiembre, 2024</p>
+            <h1>Alejandra & Horacio</h1>
+            <p id="date">9 de Agosto, 2025</p>
+            <p id="countdown"></p> <!-- Contador -->
         </div>
     </section>
 
+    <!-- Navbar personalizado -->
+    <nav class="navbar-custom">
+        <a href="#nuestra-historia">Nuestra Historia</a>
+        <a href="#evento">El Evento</a>
+        <a href="#codigo-vestimenta">Código de Vestimenta</a>
+        <a href="#confirmacion">Confirmación</a>
+        <a href="#paleta-de-colores">Paleta de Colores</a>
+    </nav>
+
     <!-- Nuestra Historia -->
-    <section id="nuestra-historia" class="py-5">
+    <section id="nuestra-historia" class="parallax-section py-5">
         <div class="container">
             <h2 class="section-title text-center">Nuestra Historia</h2>
             <p class="text-center mt-4">Desde el primer momento que nos conocimos, supimos que estábamos destinados a estar juntos. Esta es nuestra historia de amor...</p>
@@ -112,34 +212,27 @@
     </section>
 
     <!-- El Evento -->
-    <section id="evento" class="py-5 bg-light">
+    <section id="evento" class="parallax-section py-5">
         <div class="container">
             <h2 class="section-title text-center">El Evento</h2>
             <div class="row mt-4">
-                <div class="col-md-4">
-                    <div class="card text-center">
+                <div class="col-md-6 text-center">
+                    <i class="bi bi-building icono-evento"></i>
+                    <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Ceremonia</h5>
-                            <p class="card-text">Lugar: Iglesia de San Pedro</p>
+                            <p class="card-text">Lugar: Iglesia Corpus Christi</p>
                             <p class="card-text">Hora: 4:00 PM</p>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card text-center">
+                <div class="col-md-6 text-center">
+                    <i class="bi bi-geo-alt icono-evento"></i>
+                    <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">Recepción</h5>
-                            <p class="card-text">Lugar: Salón La Estancia</p>
+                            <p class="card-text">Lugar: El Uro Eventos</p>
                             <p class="card-text">Hora: 6:00 PM</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card text-center">
-                        <div class="card-body">
-                            <h5 class="card-title">Cena</h5>
-                            <p class="card-text">Menú especial y muchas sorpresas</p>
-                            <p class="card-text">Hora: 8:00 PM</p>
                         </div>
                     </div>
                 </div>
@@ -147,22 +240,43 @@
         </div>
     </section>
 
-    <!-- Ubicación -->
-    <section id="ubicacion" class="py-5">
+    <!-- Código de Vestimenta -->
+    <section id="codigo-vestimenta" class="parallax-section py-5">
         <div class="container">
-            <h2 class="section-title text-center">Ubicación</h2>
-            <p class="text-center mt-4">Iglesia de San Pedro, Av. de la Marina 1234, Ciudad de México, México</p>
-            <p class="text-center mt-2">Salón La Estancia, Calle Principal 5678, Ciudad de México, México</p>
+            <h2 class="section-title text-center">Código de Vestimenta</h2>
+            <p class="text-center mt-4">La boda tendrá un código de vestimenta formal. Por favor, vístete con elegancia para celebrar este día especial con nosotros.</p>
         </div>
     </section>
 
     <!-- Confirmación -->
-    <section id="confirmacion" class="py-5 bg-light">
+    <section id="confirmacion" class="parallax-section py-5">
         <div class="container">
             <h2 class="section-title text-center">Confirmación</h2>
-            <p class="text-center mt-4">Por favor confirma tu asistencia antes del 15 de Septiembre.</p>
+            <p class="text-center mt-4">Por favor confirma tu asistencia antes del 15 de Julio.</p>
             <div class="text-center">
-                <a href="#" class="btn btn-lg" style="background-color: var(--color-1); color: #fff;">Confirmar Asistencia</a>
+                <a href="#" class="btn btn-lg" style="background-color: var(--color-primary); color: var(--color-white);">Confirmar Asistencia</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paleta de Colores -->
+    <section id="paleta-de-colores" class="py-5">
+        <h2 class="color-palette-title">Paleta de Colores</h2> <!-- Título de la sección -->
+        <div class="container-fluid color-palette">
+            <div class="color-box color-1">
+                <p>Tangelo</p>
+            </div>
+            <div class="color-box color-2">
+                <p>Plum</p>
+            </div>
+            <div class="color-box color-3">
+                <p>Coral</p>
+            </div>
+            <div class="color-box color-4">
+                <p>Tickle me pink</p>
+            </div>
+            <div class="color-box color-5">
+                <p>Cerise</p>
             </div>
         </div>
     </section>
@@ -170,10 +284,80 @@
     <!-- Pie de página -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Horacio y Alejandra. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Alejandra & Horacio. Todos los derechos reservados.</p>
         </div>
     </footer>
 
+    <script>
+        // Configuración de partículas
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 50,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "shape": {
+                    "type": "circle"
+                },
+                "opacity": {
+                    "value": 0.7,
+                    "random": true
+                },
+                "size": {
+                    "value": 10,
+                    "random": true
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": true,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false
+                }
+            },
+            "interactivity": {
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                }
+            },
+            "retina_detect": true
+        });
+
+        // Configuración del contador
+        var countDownDate = new Date("Aug 9, 2025 00:00:00").getTime();
+
+        var countdownfunction = setInterval(function() {
+
+            var now = new Date().getTime();
+            var distance = countDownDate - now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+            + minutes + "m " + seconds + "s ";
+
+            if (distance < 0) {
+                clearInterval(countdownfunction);
+                document.getElementById("countdown").innerHTML = "¡Es hoy!";
+            }
+        }, 1000);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
